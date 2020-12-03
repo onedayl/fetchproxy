@@ -1,0 +1,7 @@
+{
+  "name": "fetchproxy",
+  "description": "a proxy serveice for web development",
+  "repository": "https://github.com/onedayl/fetchproxy",
+  "keywords": ["proxy", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
