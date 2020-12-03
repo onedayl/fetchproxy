@@ -1,9 +1,10 @@
+const path = require('path')
 const express = require('express')
 const PORT = process.env.PORT || 5000
 
 // routers
-const indexRouter = require('./routes/index')
-const fetchrssRouter = require('./routes/fetchrss')
+const indexRouter = require(path.join(__dirname, 'routes/index'))
+const fetchrssRouter = require(path.join(__dirname, 'routes/fetchrss'))
 
 // init & config
 const app = express()
