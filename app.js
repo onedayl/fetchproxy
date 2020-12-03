@@ -1,15 +1,12 @@
 const express = require('express')
-const { stat } = require('fs')
-const path = require('path')
 const PORT = process.env.PORT || 5000
 
 // routers
-const indexRouter = require(path.join(__dirname, 'routes/index'))
-const fetchrssRouter = require(path.join(__dirname, 'routes/fetchrss'))
+const indexRouter = require('./routes/index')
+const fetchrssRouter = require('./routes/fetchrss')
 
 // init & config
 const app = express()
-app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/fetchrss', fetchrssRouter)
 app.use((req, res) => {

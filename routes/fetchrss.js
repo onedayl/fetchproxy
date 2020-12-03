@@ -14,7 +14,6 @@ router.get('/:rssId?', async (req, res, next) => {
       res.locals.status = 200
       res.locals.data = feed.items.map(item => {
         const snippetLength = item.contentSnippet.length
-        console.log(snippetLength)
         return {
           title: item.title,
           link: item.link,
