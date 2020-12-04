@@ -14,7 +14,7 @@ app.use((req, res) => {
   const { status, data } = res.locals
   if (status !== undefined) {
     if (status == 200) {
-      res.end(JSON.stringify(data))
+      res.set('Content-Type', 'application/json; charset=utf-8').json(data)
     } else {
       res.sendStatus(status)
     }
